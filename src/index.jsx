@@ -1,7 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'mobx-react';
+
 import './index.css';
-import App from './App';
+import * as models from './Models';
+import App from './Components/App/App-container';
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <Provider {...models}>
+        <App />
+    </Provider>,
+    document.getElementById('root')
+);
