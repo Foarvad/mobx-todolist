@@ -7,19 +7,32 @@ import TodoView from './Todo-view';
 @inject('TasksModel')
 @observer
 class Todo extends Component {
-    render() {
-        const {
-            TasksModel: { tasks },
-        } = this.props;
+  render() {
+    const {
+      TasksModel: { tasks, completedTasksCount, totalTasksCount },
+    } = this.props;
 
-        return <TodoView tasks={tasks} addTask={this.handleAddTask}/>;
-    }
+    return (
+      <TodoView
+        addTask={this.handleAddTask}
+        tasks={tasks}
+        completedTasksCount={completedTasksCount}
+        totalTasksCount={totalTasksCount}
+      />
+    );
+  }
 
-    handleAddTask = () => {
-        const { TasksModel: { addTask } } = this.props;
+  handleAddTask = () => {
+    const {
+      TasksModel: { addTask },
+    } = this.props;
 
-        addTask({ id: 1, isFinished: false, title: 'New task', description: 'Description of a new task' });
-    }
+    addTask({
+      isFinished: false,
+      title: 'New task',
+      description: 'Description of a new task',
+    });
+  };
 }
 
 export default Todo;

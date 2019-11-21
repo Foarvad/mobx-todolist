@@ -2,8 +2,8 @@ import React from 'react';
 import { Wrapper } from './App-styles';
 
 
-function App() {
-    return <Wrapper>Test</Wrapper>;
+function App({ children }) {
+  return <Wrapper>{children}</Wrapper>;
 }
 
 export default App;

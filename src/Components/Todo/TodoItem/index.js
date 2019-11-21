@@ -1,1 +1,1 @@
-export { default } from './TodoItem-view';
+export { default } from './TodoItem-container';

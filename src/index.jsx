@@ -8,8 +8,8 @@ import App from './Components/App/App-container';
 
 
 ReactDOM.render(
-    <Provider {...models}>
-        <App />
-    </Provider>,
-    document.getElementById('root')
+  <Provider {...models}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
 );

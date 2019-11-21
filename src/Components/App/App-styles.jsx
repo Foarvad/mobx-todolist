@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 
 export const Wrapper = styled.div`
-    display: flex;
-    flex-flow: column nowrap;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 400px;
+  margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
+  padding: 30px 0;
 `;
